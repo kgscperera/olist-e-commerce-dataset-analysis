@@ -28,7 +28,7 @@ Cleaned and explored via SQL, visualized in Power BI and documented in Microsoft
 
 ## Dashboard Preview
 
-![Dashboard](dashboard and report/dashboard.png)
+![Dashboard](dashboard_and_Report/Dashboard.png)
 
 
 
