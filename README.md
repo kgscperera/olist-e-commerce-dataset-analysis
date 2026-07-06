@@ -6,6 +6,19 @@ Cleaned and explored via SQL, visualized in Power BI and documented in Microsoft
 
 ---
 
+<details>
+  <summary>🔍 View Example Code</summary>
+
+```javascript
+const message = "Hello, World!";
+console.log(message);
+```
+
+</details>
+
+
+---
+
 ## Key Findings
 
 - Late delivery is concentrated in Brazil's **North and Northeast** region. States with highest late delivery Percentages, **Alagoas (24%)** and **Maranhao (20%)**, are the most remote locations from the logistics hubs in Southeast region.
