@@ -2,20 +2,7 @@
 
 End-to-end analysis of the Olist Brazilian e-commerce marketplace (~100K orders, ~3K sellers, ~33K products, and 1M+ geolocation records).
 
-Cleaned and explored via SQL, visualized in Power BI and documented in Microsoft Office.
-
----
-
-<details>
-  <summary>🔍 View Example Code</summary>
-
-```javascript
-const message = "Hello, World!";
-console.log(message);
-```
-
-</details>
-
+Cleaned and explored via **MySQL**, visualized in **Power BI** and documented in Microsoft **Office Suite**.
 
 ---
 
@@ -121,6 +108,12 @@ Additional reference file: `product_category_name_translation.csv`
 
 ## Execution Order
 
+1. Run the scripts in `./data_cleaning/` directory.
+2. Run the scripts in `./data_analysis/` directory.
+
+<details>
+  <summary>🔍 View Full Execution Order</summary>
+
 #### Data Cleaning
 
 `/data_cleaning/Cleaning_01_Customers.sql`
@@ -148,6 +141,8 @@ Additional reference file: `product_category_name_translation.csv`
 
 `/data_analysis/Analysis_03_Product_Category_Performance.sql`
 
+
+</details>
 
 ## Final Cleaned Tables
 
