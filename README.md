@@ -2,7 +2,7 @@
 
 ## Project Summary
 
-An end-to-end analysis of the Olist Brazilian e-commerce marketplace 99K+ orders, 3K+ sellers, 33K+ products, and 1M+ geolocation records, taken from raw CSV to business-ready insight.
+An end-to-end analysis of the Olist Brazilian e-commerce marketplace **99K+ orders, 3K+ sellers, 33K+ products, and 1M+ geolocation records**, taken from raw CSV to business-ready insight.
 
 **Pipeline:** cleaned and validated in **MySQL** → analyzed with **SQL** → visualized in **Power BI** → reported via **Microsoft Office**.
 
@@ -26,13 +26,11 @@ An end-to-end analysis of the Olist Brazilian e-commerce marketplace 99K+ orders
 | Executive Report | Business-facing summary of findings | [Download](dashboard_and_report/Executive_Report.pdf) |
 | Technical Report | Full methodology, SQL logic, and data pipeline | [Download](dashboard_and_report/Technical_Report.pdf) |
 
-
 ---
 
 ## Dashboard Preview
 
 ![Dashboard](dashboard_and_report/Dashboard.png)
-
 
 
 KPIs (Revenue, Orders, Customers, Sellers), top performing product categories by revenue and demand, revenue trend over time, demand vs. rating distribution, a clickable "late delivery by state" ranking, two state maps (average delivery time, average rating), and Time Frame / Order Status filters.
