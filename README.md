@@ -1,10 +1,10 @@
-# Brazilian E-Commerce (Olist) - Data Analyst Project
 
-End-to-end analysis of the Olist Brazilian e-commerce marketplace (~100K orders, ~3K sellers, ~33K products, and 1M+ geolocation records).
 
-Cleaned and explored via **MySQL**, visualized in **Power BI** and documented in Microsoft **Office Suite**.
+## Project Summary
 
----
+An end-to-end analysis of the Olist Brazilian e-commerce marketplace 99K+ orders, 3K+ sellers, 33K+ products, and 1M+ geolocation records, taken from raw CSV to business-ready insight.
+
+**Pipeline:** cleaned and validated in **MySQL** → analyzed with **SQL** → visualized in **Power BI** → reported via **Microsoft Office**.
 
 ## Key Findings
 
@@ -15,14 +15,17 @@ Cleaned and explored via **MySQL**, visualized in **Power BI** and documented in
 - Products with lowest customer review scores: **"Bed Bath Table", "Office Furniture", "Furniture Decor", "Computers Accessories" and "Watches Gifts"**
 
 - Several top revenue generating products rank among the lowest in customer satisfaction: **"Bed Bath Table", "Computers Accessories" and "Watches Gifts"**
+<br/>
 
-**Interactive dashboard:** (Power BI) `dashboard_and_report/Olist E-Commerce Dataset - Dashboard.pbix`
+## Deliverables
 
-**Static dashboard:** (PDF) `dashboard_and_report/Olist E-Commerce Dataset - Dashboard.pdf`
+| Resource | Description | Link |
+|---|---|---|
+| Interactive Dashboard | Power BI file (.pbix), connect to your own MySQL instance to explore | [Open](dashboard_and_report/Dashboard.pbix) |
+| Dashboard (Static) | PDF export of the dashboard, no setup required | [Download](dashboard_and_report/Dashboard.pdf) |
+| Executive Report | Business-facing summary of findings | [Download](dashboard_and_report/Executive_Report.pdf) |
+| Technical Report | Full methodology, SQL logic, and data pipeline | [Download](dashboard_and_report/Technical_Report.pdf) |
 
-**Business Executive Report:** (PDF) `dashboard_and_report/Olist E-Commerce Dataset - Executive Report.pdf`
-
-**Technical report:** (PDF) `dashboard_and_report/Olist E-Commerce Dataset - Technical Report.pdf`
 
 ---
 
@@ -86,8 +89,48 @@ Map legend
 4. Run the scripts in `/data_analysis` folder same as above to go through data analysis.
 5. *(Optional)* Connect Power BI to the resulting schema to reproduce the dashboard (or view the files in the `/dashboard_and_report` folder, both **.pbix** and **.pdf** files are available).
 
+
+<details>
+  <summary>🔍 <h4> Execution Order <h4></summary>
+
+##### Data Cleaning
+
+1. Run the scripts in `./data_cleaning/` directory.
+
+`Cleaning_01_Customers.sql`
+
+`Cleaning_02_Geolocation.sql`
+
+`Cleaning_03_Order_Items.sql`
+
+`Cleaning_04_Order_Payments.sql`
+
+`Cleaning_04_Order_Payments.sql`
+
+`Cleaning_06_Orders.sql`
+
+`Cleaning_07_Products.sql`
+
+`Cleaning_08_Sellers.sql`
+
+
+##### Data Analysis
+2. Run the scripts in `./data_analysis/` directory.
+
+`Analysis_01_Regional_Performance.sql`
+
+`Analysis_02_Seasonality_Performance.sql`
+
+`Analysis_03_Product_Category_Performance.sql`
+
+
+</details>
+
+
+
+
 ---
----
+
 
 # Technical Documentation
 
@@ -106,56 +149,20 @@ Map legend
 
 Additional reference file: `product_category_name_translation.csv`
 
-## Execution Order
 
-1. Run the scripts in `./data_cleaning/` directory.
-2. Run the scripts in `./data_analysis/` directory.
-
-<details>
-  <summary>🔍 View Full Execution Order</summary>
-
-#### Data Cleaning
-
-`/data_cleaning/Cleaning_01_Customers.sql`
-
-`/data_cleaning/Cleaning_02_Geolocation.sql`
-
-`/data_cleaning/Cleaning_03_Order_Items.sql`
-
-`/data_cleaning/Cleaning_04_Order_Payments.sql`
-
-`/data_cleaning/Cleaning_04_Order_Payments.sql`
-
-`/data_cleaning/Cleaning_06_Orders.sql`
-
-`/data_cleaning/Cleaning_07_Products.sql`
-
-`/data_cleaning/Cleaning_08_Sellers.sql`
-
-
-#### Data Analysis
-
-`/data_analysis/Analysis_01_Regional_Performance.sql`
-
-`/data_analysis/Analysis_02_Seasonality_Performance.sql`
-
-`/data_analysis/Analysis_03_Product_Category_Performance.sql`
-
-
-</details>
 
 ## Final Cleaned Tables
 
-| Block | Final Table   | Primary Key   |
-|---------|------------------------------------------|--------------------------------|
-| Block 2 | olist_customers_dataset_staging_1 | customer_id   |
-| Block 3 | olist_geolocation_dataset_staging_2  | geolocation_zip_code_prefix |
-| Block 4 | olist_order_items_dataset_staging_2  | (order_id, order_item_id) |
-| Block 5 | olist_order_payments_dataset_staging_1 | (order_id, payment_sequential) |
-| Block 6 | olist_order_reviews_dataset_staging_2  | none - see Known Issues  |
-| Block 7 | olist_orders_dataset_staging_1 | order_id    |
-| Block 8 | olist_products_dataset_staging_2  | product_id  |
-| Block 9 | olist_sellers_dataset_staging_1   | seller_id   |
+| Source CSV | Raw Table | Final Table | Primary Key | Initial Row Count | Final Row Count |
+|---|---|---|---|---|---|
+| olist_customers_dataset.csv | olist_customers_dataset | olist_customers_dataset_staging_1 | customer_id | 99,441 | 99,441 |
+| olist_geolocation_dataset.csv | olist_geolocation_dataset | olist_geolocation_dataset_staging_2 | geolocation_zip_code_prefix | 1,000,163 | 19,015 |
+| olist_order_items_dataset.csv | olist_order_items_dataset | olist_order_items_dataset_staging_2 | (order_id, order_item_id) | 112,650 | 112,650 |
+| olist_order_payments_dataset.csv | olist_order_payments_dataset | olist_order_payments_dataset_staging_1 | (order_id, payment_sequential) | 103,886 | 103,886 |
+| olist_order_reviews_dataset.csv | olist_order_reviews_dataset | olist_order_reviews_dataset_staging_2 | none - see Known Issues | 99,224 | 99,224 |
+| olist_orders_dataset.csv | olist_orders_dataset | olist_orders_dataset_staging_1 | order_id | 99,441 | 99,441 |
+| olist_products_dataset.csv | olist_products_dataset | olist_products_dataset_staging_2 | product_id | 32,951 | 32,951 |
+| olist_sellers_dataset.csv | olist_sellers_dataset | olist_sellers_dataset_staging_1 | seller_id | 3,095 | 3,095 |
 
 ## Cleaning Operations Applied
 
@@ -189,23 +196,23 @@ Additional reference file: `product_category_name_translation.csv`
 
 ## Known Issues and Design Decisions
 
-**No Primary Key in Order Reviews.** 
+**1. No Primary Key in Order Reviews.** 
 
 Two structural patterns exist between review_id and order_id: One review linked to multiple orders and one order linked to multiple reviews. Neither was dropped since the correct row to keep depends on downstream analysis context. This is resolved via `latest_review` CTE where needed.
 
-**Did not standardized Geolocation city names.** 
+**2. Did not standardized Geolocation city names.** 
 
 ~5,953 unique raw city name variants with misspellings and accent inconsistencies. This analysis does not cover any city level analysis. Therefore, Geolocation city names does not need cleaning.
 
-**Geolocation deduplication is by zip_code_prefix only**.
+**3. Geolocation deduplication is by zip_code_prefix only**.
 
 Kept one row per zip code for 2 reasons. First, only state level analysis is conducted and in depth zip_code_prefix is unnecessary to achieve that objective. Second, zip_code_prefix and state is only geographic parameters utilized in this analysis. Two known state mislabels present in the raw data (AC where SP/RJ is correct) are not explicitly corrected before this dropping duplicates.
 
-**Product dimensions - zero values flagged, not dropped.** since these columns are not needed for current analysis.
+**4. Product dimensions - zero values flagged, not dropped.** since these columns are not needed for current analysis.
 
-**VARCHAR column widths were set from expected ranges**, each value is validated against actual max string length in the source data via excel before importing.
+**5. VARCHAR column widths were set from expected ranges**, each value is validated against actual max string length in the source data via excel before importing.
 
-**LOAD DATA Duplication safety:** Re-running `LOAD DATA LOCAL INFILE` without dropping relevant table caused silent duplicate appends. Fixed via `DROP TABLE IF EXISTS` before every `CREATE TABLE`.
+**6. LOAD DATA Duplication safety:** Re-running `LOAD DATA LOCAL INFILE` without dropping relevant table caused silent duplicate appends. Fixed via `DROP TABLE IF EXISTS` before every `CREATE TABLE`.
 
 ## Prerequisites
 
