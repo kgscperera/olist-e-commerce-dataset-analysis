@@ -16,13 +16,13 @@ Cleaned and explored via SQL, visualized in Power BI and documented in Microsoft
 
 - Several top revenue generating products rank among the lowest in customer satisfaction: **"Bed Bath Table", "Computers Accessories" and "Watches Gifts"**
 
-**Interactive dashboard:** (Power BI) `dashboard and report/Olist E-Commerce Dataset - Dashboard.pbix`
+**Interactive dashboard:** (Power BI) `dashboard_and_report/Olist E-Commerce Dataset - Dashboard.pbix`
 
-**Static dashboard:** (PDF) `dashboard and report/Olist E-Commerce Dataset - Dashboard.pdf`
+**Static dashboard:** (PDF) `dashboard_and_report/Olist E-Commerce Dataset - Dashboard.pdf`
 
-**Business Executive Report:** (PDF) `dashboard and report/Olist E-Commerce Dataset - Executive Report.pdf`
+**Business Executive Report:** (PDF) `dashboard_and_report/Olist E-Commerce Dataset - Executive Report.pdf`
 
-**Technical report:** (PDF) `dashboard and report/Olist E-Commerce Dataset - Technical Report.pdf`
+**Technical report:** (PDF) `dashboard_and_report/Olist E-Commerce Dataset - Technical Report.pdf`
 
 ---
 
@@ -84,7 +84,7 @@ Map legend
 2. Download the CSV files from the Kaggle link above and import the data to MySQL Workbench as new schema.
 3. Run scripts in `/data_cleaning` folder, in the same order, via MySQL Workbench to clean the dataset.
 4. Run the scripts in `/data_analysis` folder same as above to go through data analysis.
-5. *(Optional)* Connect Power BI to the resulting schema to reproduce the dashboard (or view the files in the `/dashboard and report` folder, both **.pbix** and **.pdf** files are available).
+5. *(Optional)* Connect Power BI to the resulting schema to reproduce the dashboard (or view the files in the `/dashboard_and_report` folder, both **.pbix** and **.pdf** files are available).
 
 ---
 ---
@@ -207,6 +207,6 @@ Kept one row per zip code for 2 reasons. First, only state level analysis is con
 
 ### Note
 
-The script in `/Extra` folder contains the original script I used to import data from CSV files to MySQL Workbench. I preferred local data load for 2 reasons. First, local data load is faster than default import Wizard. Second, this is the most efficient method for a small scale project. 
+The script in `/extra` folder contains the original script I used to import data from CSV files to MySQL Workbench. I preferred local data load for 2 reasons. First, local data load is faster than default import Wizard. Second, this is the most efficient method for a small scale project. 
 
 You must use `SET GLOBAL local_infile = 1;` in MySQL editor settings (Manage Server Connections > MySQL connections > Advanced > Other) to give permission to load data locally. This is ONLY relevant for local file loading method. Default "Data Import Wizard" or any other method does not need to change this permission.
