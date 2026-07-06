@@ -28,7 +28,7 @@ Cleaned and explored via SQL, visualized in Power BI and documented in Microsoft
 
 ## Dashboard Preview
 
-![Dashboard](dashboard and report/Olist E-Commerce Dataset - Dashboard.png)
+![Dashboard](dashboard and report/dashboard.png)
 
 
 
