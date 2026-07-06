@@ -28,7 +28,7 @@ Cleaned and explored via SQL, visualized in Power BI and documented in Microsoft
 
 ## Dashboard Preview
 
-![Dashboard](./dashboard and report/Olist E-Commerce Dataset - Dashboard.png)
+[Dashboard](dashboard and report/Olist E-Commerce Dataset - Dashboard.png)
 
 KPIs (Revenue, Orders, Customers, Sellers), top performing product categories by revenue and demand, revenue trend over time, demand vs. rating distribution, a clickable "late delivery by state" ranking, two state maps (average delivery time, average rating), and Time Frame / Order Status filters.
 
