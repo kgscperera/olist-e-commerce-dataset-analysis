@@ -10,7 +10,7 @@ Cleaned and explored via SQL, visualized in Power BI and documented in Microsoft
 
 - Late delivery is concentrated in Brazil's **North and Northeast** region. States with highest late delivery Percentages, **Alagoas (24%)** and **Maranhao (20%)**, are the most remote locations from the logistics hubs in Southeast region.
 - The **carrier to customer** delivery leg drives most delays, not seller dispatch time.
-- Revenue grew steadily from 2017 Q1 to 2018 Q2, fastest through late 2017, the exact window where average review scores began declining.
+- Revenue grew steadily **from 2017 Q1 to 2018 Q2**, fastest through late 2017, the exact window where average review scores began declining.
 - Top revenue generating products: **"Health and Beauty", "Watches Gifts", "Bed Bath Table", "Sports Leisure" and "Computers Accessories"**
 - Products with lowest customer review scores: **"Bed Bath Table", "Office Furniture", "Furniture Decor", "Computers Accessories" and "Watches Gifts"**
 
